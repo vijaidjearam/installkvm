@@ -66,4 +66,4 @@
     - shell: virsh pool-define-as lvmpool logical --source-name vgvm --target /dev/vgvm
       when: ('"lvmpool" not in poollist.stdout') and ('"vgvm" in volumegroup.stdout')
     - shell: virsh pool-start lvmpool
-    - shell: virsh pool-autostart lvmpool
+    - shell: virsh pool-autostart lvmpool    
