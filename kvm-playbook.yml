@@ -36,6 +36,7 @@
     - service:
         name: libvirtd
         state: restarted
+       when: service_libvirtd_status|failed
 
     - stat: path=/etc/libvirt/qemu/networks/autostart/default.xml
       register: check_default
